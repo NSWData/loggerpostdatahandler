@@ -19,7 +19,8 @@ $timestamp = date('YmdHis');
  * Parse the incoming data
 **************************************************************/
 
-$upload_dir = '/var/www/htdocs/import/loggerpostdatahandler/WSMicrosSpider/raw/';
+$upload_dir = '/var/www/htdocs/import/loggerpostdatahandler/WSMicroSpider/raw/';
+
 $logger_id = 'UNKNOWN';
 foreach($_FILES as $file) {
         var_dump($file);
@@ -37,7 +38,11 @@ foreach($_FILES as $file) {
         $last_line = `tail -n 1 $target_file`;
 }
 
+$cmd = "/usr/bin/scp $target_file 34.194.103.24:/data/loadingzone/import/ImportWSMicrosSpider";
+system($cmd);
 
+
+// We need to respond to the Micro Spider logger with an 'OK' to tell it to close the connection
 header('HTTP/1.1 200 OK', true, 200);
 header('Content-Length: 102400');
 header('Content-Type: application/json');
@@ -49,7 +54,5 @@ $rptMsg = "New Logger post from $logger_id @ $timestamp \n\nLast Recordings : \n
 $rptMsg .= "\n\nSaving to : $target_file\n";
 $rptStatus = 'OK';
 //$record = new LogReport($rpt,$rptSum,$rptMsg,$rptStatus,null,$logger_id);
-
-
 ?>
 
