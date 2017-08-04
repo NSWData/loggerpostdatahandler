@@ -1,0 +1,3 @@
+Time,rain ,Rain,External Battery,Modem Signal
+12-Jul-17 0:00:17,,,,48.000,,,,,,,,,,,,,,,
+12-Jul-17 0:00:00,,,12.639,,,,,,,,,,,,,,,,

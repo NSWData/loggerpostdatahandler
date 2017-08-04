@@ -1,0 +1,3 @@
+Time,rain ,Internal Moisture,External Battery,Battery Charger,System Temperature,Modem Signal
+14-Feb-17 9:45:00,,,,,,45.000,,,,,,,,,,,,,
+14-Feb-17 9:30:00,21.500,0.000,13.292,0.000,23.500,45.000,,,,,,,,,,,,,

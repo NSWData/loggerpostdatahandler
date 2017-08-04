@@ -1,0 +1,3 @@
+Time,rain ,Rain,External Battery,Modem Signal
+17-Feb-17 18:00:18,,,,45.000,,,,,,,,,,,,,,,
+17-Feb-17 18:00:00,,,13.292,,,,,,,,,,,,,,,,
