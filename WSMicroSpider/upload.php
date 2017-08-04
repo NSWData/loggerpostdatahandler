@@ -10,7 +10,7 @@
  *				2) data file 	
  * 
  *************************************************************/
-error_reporting(E_ALL);
+error_reporting(0);
 //require_once "../../../../lib/LogReport.class.php";
 $timestamp = date('YmdHis');
 
@@ -38,8 +38,12 @@ foreach($_FILES as $file) {
         $last_line = `tail -n 1 $target_file`;
 }
 
-$cmd = "/usr/bin/scp $target_file 34.194.103.24:/data/loadingzone/import/ImportWSMicrosSpider";
-system($cmd);
+// A wrapper shell script transfers as apache user doesn NOT HAVE private SSH keys !
+// awoerlee@prod-api01-public:/var/www/scripts$ ./WSMicroSpiderLoadingZoneTransfer.sh
+
+#$cmd = "/usr/bin/scp $target_file 34.194.103.24:/data/loadingzone/import/ImportWSMicrosSpider/";
+#$cmd = "/usr/bin/scp $target_file 52.63.51.77:/data/loadingzone/import/ImportWSMicroSpider/";
+#system($cmd);
 
 
 // We need to respond to the Micro Spider logger with an 'OK' to tell it to close the connection
@@ -55,4 +59,3 @@ $rptMsg .= "\n\nSaving to : $target_file\n";
 $rptStatus = 'OK';
 //$record = new LogReport($rpt,$rptSum,$rptMsg,$rptStatus,null,$logger_id);
 ?>
-
