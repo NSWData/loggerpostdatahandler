@@ -1,2 +1,0 @@
-Time,rain ,rain counter,External Battery,Modem Signal
-15-Feb-17 3:00:18,,,,51.000,,,,,,,,,,,,,,,

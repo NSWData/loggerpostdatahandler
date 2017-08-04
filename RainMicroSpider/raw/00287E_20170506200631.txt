@@ -1,3 +1,0 @@
-Time,rain ,Rain,External Battery,Modem Signal
-7-May-17 0:00:16,,,,45.000,,,,,,,,,,,,,,,
-7-May-17 0:00:00,,,12.938,,,,,,,,,,,,,,,,

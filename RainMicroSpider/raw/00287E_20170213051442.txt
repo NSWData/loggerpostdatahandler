@@ -1,1 +1,0 @@
-This is a test HTTP POST sent by hydroSpider2 at RainmicroSpider, serial: 00287E. The current time is 13/02/17, 15:10:58
